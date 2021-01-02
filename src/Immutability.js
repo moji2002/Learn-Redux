@@ -83,3 +83,29 @@ console.log(updatedPerson3);
 
 //===========================================================================
 
+// Updating Arrays
+const numbers = [1, 2, 3, 4];
+
+// adding 
+// add in the end
+// const added = [...numbers, 5]; 
+// add in the beginning
+// const added = [5,...numbers]; 
+// add in the middle
+const index = numbers.indexOf(2);
+const added = [
+    ...numbers.slice(0, index),
+    'added value',
+    ...numbers.slice(index)
+];
+
+//removing 
+const removed = numbers.filter(n => n !== 2);
+
+// updating
+const updatedArray = numbers.map(n => n === 2 ? 20 : n);
+
+console.log(numbers);
+console.log(added);
+console.log(removed);
+console.log(updatedArray);
