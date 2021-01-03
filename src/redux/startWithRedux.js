@@ -15,3 +15,9 @@ function reducer(store, action) {
 // the reducer will compute the new state and  returns it 
 // next store set the new state internally
 // and notify ui componant about the state
+
+// Steps
+// 1.Design the store
+// 2.Difine the actions
+// 3.Create one or more reducers (take an action and return the updated state)
+// 4.Setup the store based on the reducer
