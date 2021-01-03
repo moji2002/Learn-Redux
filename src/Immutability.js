@@ -109,3 +109,65 @@ console.log(numbers);
 console.log(added);
 console.log(removed);
 console.log(updatedArray);
+
+//===========================================================================
+
+// Libraries 
+
+// Immutable
+// Immer
+// Mori
+
+// Base code 
+let book = { title: 'Harry Potter' };
+
+function publish(book) {
+    book.isPublished = true;
+}
+
+publish(book);
+
+console.log(book);
+
+//===========================================================================
+
+// Immutable example
+
+import { Map } from 'immutable';
+
+const book = Map({ title: 'Harry Potter' });
+
+function publish(book) {
+    // its not going to modify the original object
+    // its going to return a new object
+    return book.set('isPublished', true);
+}
+
+const updatedBook = publish(book);
+
+// get a property
+console.log(book.get('title'));
+
+// convert it to regular js object
+console.log(book.toJS());
+console.log(updatedBook.toJS());
+
+//===========================================================================
+
+// Immer example
+
+import { produce } from 'immer';
+
+let book = { title: 'Harry Potter' };
+
+function publish(book) {
+    return produce(book, draftBook => {
+        draftBook.isPublished = true;
+    });
+}
+
+const updatedBook = publish(book);
+
+console.log(book);
+console.log(updatedBook);
+ 
