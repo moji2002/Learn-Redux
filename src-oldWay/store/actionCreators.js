@@ -1,4 +1,4 @@
-import actions from "./actionTypes";
+import actions from "../actionTypes";
 
 export const bugAdded = (description) => ({
   type: actions.BUG_ADDED,

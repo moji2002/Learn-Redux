@@ -1,6 +1,6 @@
-import store from "../../store";
-import actions from "./actionTypes";
-import { bugAdded, bugResolved } from "./actionCreators";
+import store from "./store/store";
+import actions from "./store/actionTypes";
+import { bugAdded, bugResolved } from "./store/actionCreators";
 
 // console.log(store);
 
