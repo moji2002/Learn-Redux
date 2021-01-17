@@ -72,5 +72,9 @@ const reducer = createSlice({
   }
 })
 
+// Selector 
+export const getUnresolevedBugs = state => state.bugs.filter(bug => !bug.resolved)
+// use reselect library to use memoization
+
 export const { bugAdded, bugResolved } = reducer.actions;
 export default reducer;
